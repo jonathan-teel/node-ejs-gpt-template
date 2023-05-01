@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node-Ejs-Gpt-Template</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="token-counter">
+        Tokens Used : <span id="token-count">0</span>
+    </div>
+    <div class="options-container">
+        <label for="api-key" class="input-label">API Key:</label>
+        <input type="text" placeholder="Enter your API key" id="api-key" required><br>
+        <label for="model-select" class="input-label">Model:</label>
+        <select id="model-select" required>
+            <option value="">Select a model</option>
+            <option value="gpt-3.5-turbo" selected>GPT-3.5</option>
+            <option value="gpt-4">GPT-4</option>
+        </select><br><br>
+    </div>
+    <hr>
+    <div class="chat-section">
+        <h2 class="chat-title">Chat:</h2>
+        <div id="chat-container" class="chat-container"></div>
+        <form onsubmit="return sendMessage();" class="chat-input-form">
+            <input type="text" placeholder="Type your message here..." id="message-input" required>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
